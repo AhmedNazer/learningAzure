@@ -1,4 +1,4 @@
-
+[![Build Status](https://dev.azure.com/anazer1993/nazer/_apis/build/status/AhmedNazer.learningAzure?branchName=master)](https://dev.azure.com/anazer1993/nazer/_build/latest?definitionId=1&branchName=master)
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
