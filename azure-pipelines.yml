@@ -7,7 +7,7 @@ trigger:
 - Tibco_Build_From_Pipline
 
 pool:
-  vmImage: 'ubuntu-latest'
+  name: 'Default'
  
 
 jobs:
