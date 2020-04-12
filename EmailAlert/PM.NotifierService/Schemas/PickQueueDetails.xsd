@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/NewXMLSchema" xmlns:tns="http://www.example.org/NewXMLSchema" elementFormDefault="qualified">
+
+    <element name="QueuDetails" type="tns:MapperInputType"></element>
+    
+    <complexType name="MapperInputType">
+    	<sequence>
+    		<element name="Queues" type="tns:Queue" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="Queues" type="string"></element>
+
+    <complexType name="Queue">
+    	<sequence>
+    		<element name="PendingMsgs" type="integer"></element>
+    		<element name="QueueName" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

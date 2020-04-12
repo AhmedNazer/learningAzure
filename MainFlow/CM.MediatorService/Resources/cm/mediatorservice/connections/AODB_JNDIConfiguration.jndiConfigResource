@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_DbOxkHlWEeqdR9U3DJyQ_Q" name="cm.mediatorservice.connections.AODB_JNDIConfiguration" type="jms:JNDIConnection">
+  <jndi:configuration xsi:type="jms:JNDIConnectionConfiguration" xmi:id="_DbOxkXlWEeqdR9U3DJyQ_Q">
+    <substitutionBindings xmi:id="_LzUBYHlXEeqdR9U3DJyQ_Q" template="initialContextFactory" propName="/Connections/AODB/ContextFactory"/>
+    <substitutionBindings xmi:id="_NSzeMHlXEeqdR9U3DJyQ_Q" template="providerUrl" propName="/Connections/AODB/URL"/>
+    <userCredentials xmi:id="_P_JIoHlXEeqdR9U3DJyQ_Q">
+      <substitutionBindings xmi:id="_QeGVgHlXEeqdR9U3DJyQ_Q" template="username" propName="/Connections/AODB/UserName"/>
+      <substitutionBindings xmi:id="_R5v0IHlXEeqdR9U3DJyQ_Q" template="password" propName="/Connections/AODB/UserPwd"/>
+    </userCredentials>
+  </jndi:configuration>
+</jndi:namedResource>

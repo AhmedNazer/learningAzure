@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/PendingMsgCheck" xmlns:tns="http://www.example.org/PendingMsgCheck" elementFormDefault="qualified">
+
+    <element name="CheckPendingMsg" type="tns:CheckType"></element>
+    
+    <complexType name="CheckType">
+    	<sequence>
+    		<element name="isTrue" type="boolean"></element>
+    	</sequence>
+    </complexType>
+</schema>

@@ -4,19 +4,46 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- master
+- Tibco_Build_From_Pipline
 
 pool:
   vmImage: 'ubuntu-latest'
+ 
 
-steps:
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
-    publishJUnitResults: true
-    testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'
+jobs:
+      - job: Build
+        displayName: Build Maven Project
+        steps:
+        
+        - task: Maven@3
+          displayName: Buildin From Main POM 
+          inputs:
+            mavenPomFile: '$(system.defaultWorkingDirectory)/MAINPOM/pom.xml'
+            goals: 'clean package'
+            publishJUnitResults: true
+            testResultsFiles: '**/surefire-reports/TEST-*.xml'
+            javaHomeOption: 'JDKVersion'
+            mavenAuthenticateFeed: false
+            effectivePomSkip: false
+  
+        - task: CopyFiles@2
+          displayName: 'Copy Files to artifact staging directory'
+          inputs:
+            SourceFolder: '$(System.DefaultWorkingDirectory)'
+            Contents: '**/target/*.?(ear)'
+            TargetFolder: $(Build.ArtifactStagingDirectory)
+ 
+        - task: PublishBuildArtifacts@1
+          inputs:
+            pathToPublish: $(Build.ArtifactStagingDirectory)
+            artifactName: Maven Build Output
+    
+      - job: Shell
+        displayName: Run Shell Script
+        dependsOn: Build
+        condition: succeeded('Build')
+        steps:
+            - task: ShellScript@2
+              inputs:
+                scriptPath: test.sh
+                failOnStandardError: true

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_wzg2QXlaEeqdR9U3DJyQ_Q" name="pm.processorservice.connections.AppEMS_JNDIConfiguration" type="jms:JNDIConnection">
+  <jndi:configuration xsi:type="jms:JNDIConnectionConfiguration" xmi:id="_wzg2QnlaEeqdR9U3DJyQ_Q">
+    <substitutionBindings xmi:id="_NYWIsHlbEeqdR9U3DJyQ_Q" template="initialContextFactory" propName="/Connections/AppEMS/ContextFactory"/>
+    <substitutionBindings xmi:id="_PoEvoHlbEeqdR9U3DJyQ_Q" template="providerUrl" propName="/Connections/AppEMS/URL"/>
+    <userCredentials xmi:id="_R7TWgHlbEeqdR9U3DJyQ_Q">
+      <substitutionBindings xmi:id="_SaXREHlbEeqdR9U3DJyQ_Q" template="username" propName="/Connections/AppEMS/UserName"/>
+      <substitutionBindings xmi:id="_T0JugHlbEeqdR9U3DJyQ_Q" template="password" propName="/Connections/AppEMS/UserPwd"/>
+    </userCredentials>
+  </jndi:configuration>
+</jndi:namedResource>

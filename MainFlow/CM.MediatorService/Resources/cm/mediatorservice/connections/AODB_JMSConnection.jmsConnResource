@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jms="http://xsd.tns.tibco.com/bw/models/sharedresource/jms" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_6GhsAXlVEeqdR9U3DJyQ_Q" name="cm.mediatorservice.connections.AODB_JMSConnection" type="jms:JMSConnectionFactory">
+  <jndi:reference xmi:id="_6GiTEHlVEeqdR9U3DJyQ_Q" key="jndiConnectionJNDIName" type="jms:JNDIConnection" value="cm.mediatorservice.connections.AODB_JNDIConfiguration"/>
+  <jndi:configuration xsi:type="jms:JNDIConnectionFactory" xmi:id="_6GiTEXlVEeqdR9U3DJyQ_Q" factoryType="Queue/Topic">
+    <substitutionBindings xmi:id="_sb5SkHlWEeqdR9U3DJyQ_Q" template="jndiName" propName="/Connections/AODB/QueueConnectionFactory"/>
+    <substitutionBindings xmi:id="_tzO48HlWEeqdR9U3DJyQ_Q" template="topicFactoryJNDIName" propName="/Connections/AODB/TopicConnectionFactory"/>
+    <userCredentials xmi:id="_wHQxEHlWEeqdR9U3DJyQ_Q">
+      <substitutionBindings xmi:id="_weT_IHlWEeqdR9U3DJyQ_Q" template="username" propName="/Connections/AODB/UserName"/>
+      <substitutionBindings xmi:id="_x4NxUHlWEeqdR9U3DJyQ_Q" template="password" propName="/Connections/AODB/UserPwd"/>
+    </userCredentials>
+  </jndi:configuration>
+</jndi:namedResource>

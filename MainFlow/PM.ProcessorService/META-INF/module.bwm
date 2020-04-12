@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_hOjTkHlaEeqdR9U3DJyQ_Q" targetNamespace="http://tns.tibco.com/bw/composite/PM.ProcessorService" name="PM.ProcessorService" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_hR3GQHlaEeqdR9U3DJyQ_Q" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_hR47cHlaEeqdR9U3DJyQ_Q" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_hR5igHlaEeqdR9U3DJyQ_Q" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_hR6JkHlaEeqdR9U3DJyQ_Q" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_hR6woHlaEeqdR9U3DJyQ_Q" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_hR7XsHlaEeqdR9U3DJyQ_Q" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_hR7-wHlaEeqdR9U3DJyQ_Q" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_hR8l0HlaEeqdR9U3DJyQ_Q" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_hR9M4HlaEeqdR9U3DJyQ_Q" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_7SsK4HlaEeqdR9U3DJyQ_Q" name="/Connections/AppEMS/QueueConnectionFactory" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_9NBwoHlaEeqdR9U3DJyQ_Q" name="/Connections/AppEMS/TopicConnectionFactory" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_9WWEsHlaEeqdR9U3DJyQ_Q" name="/Connections/AppEMS/UserName" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_9bXuoHlaEeqdR9U3DJyQ_Q" name="/Connections/AppEMS/UserPwd" type="property:password" scaext:simpleValue="#!WpZtKT2jAWO0+Ktf+DW2OA==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_9iFaoHlaEeqdR9U3DJyQ_Q" name="/Connections/AppEMS/ContextFactory" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_9xRtMHlaEeqdR9U3DJyQ_Q" name="/Connections/AppEMS/URL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_sYBF4HlbEeqdR9U3DJyQ_Q" name="/Queues/INTESB" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_uY5_kHlbEeqdR9U3DJyQ_Q" name="/Queues/ICTCore" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_5sJOYHlbEeqdR9U3DJyQ_Q" name="Componentprocessor_main" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_5sJOYXlbEeqdR9U3DJyQ_Q" processName="pm.processorservice.main.processor_main"/>
+  </sca:component>
+</sca:composite>

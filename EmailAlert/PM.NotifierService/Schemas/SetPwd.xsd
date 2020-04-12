@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/SetPwd" xmlns:tns="http://www.example.org/SetPwd" elementFormDefault="qualified">
+
+    <complexType name="UserPwdType">
+    	<sequence>
+    		<element name="pwd" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="UserPwd" type="tns:UserPwdType"></element>
+</schema>

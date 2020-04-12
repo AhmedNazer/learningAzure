@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://rac.com/airlines/esb/xsd/mediatorservice/logmetada/v1_0_0_0" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://rac.com/airlines/esb/xsd/mediatorservice/logmetada/v1_0_0_0">
+	<complexType name="LoggingType">
+    	<sequence>
+    		<element name="Metadata" type="tns:MetadataType"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="MetadataType">
+    	<sequence>
+    		<element name="Timestamp" type="dateTime"></element>
+    		<element name="Source" type="string"></element>
+    		<element name="Destination" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Logging" type="tns:LoggingType"></element>
+</schema>
