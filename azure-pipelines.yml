@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- Tibco_Build_From_Pipline
+- master
 
 pool:
   name: 'Default'
