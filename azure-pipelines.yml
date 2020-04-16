@@ -47,8 +47,8 @@ jobs:
                 testResultsFormat: 'JUnit'
                 testResultsFiles: '**/TEST-*.xml'
                 failTaskOnFailedTests: true
-                testRunTitle: 'SOAPUI'
-                
+                testRunTitle: 'SOAPUITest'
+
       # - job: Shell
       #   displayName: Run Shell Script
       #   dependsOn: Build
