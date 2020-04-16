@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- Tibco_Build_From_Pipline
+- master
 
 pool:
   name: 'Default'
@@ -37,13 +37,24 @@ jobs:
           inputs:
             pathToPublish: $(Build.ArtifactStagingDirectory)
             artifactName: Maven Build Output
-    
-      - job: Shell
-        displayName: Run Shell Script
-        dependsOn: Build
-        condition: succeeded('Build')
-        steps:
-            - task: ShellScript@2
-              inputs:
-                scriptPath: test.sh
-                failOnStandardError: true
+        - task: SoapUI@2
+          inputs:
+            projectFile: 'project.xml'
+            quietMode: 'yes'
+
+        - task: PublishTestResults@2
+          inputs:
+                testResultsFormat: 'JUnit'
+                testResultsFiles: '**/TEST-*.xml'
+                failTaskOnFailedTests: true
+                testRunTitle: 'SOAPUITest'
+
+      # - job: Shell
+      #   displayName: Run Shell Script
+      #   dependsOn: Build
+      #   condition: succeeded('Build')
+      #   steps:
+      #       - task: ShellScript@2
+      #         inputs:
+      #           scriptPath: test.sh
+      #           failOnStandardError: true
