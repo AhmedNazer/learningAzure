@@ -38,12 +38,12 @@ jobs:
             pathToPublish: $(Build.ArtifactStagingDirectory)
             artifactName: Maven Build Output
     
-      - job: Shell
-        displayName: Run Shell Script
-        dependsOn: Build
-        condition: succeeded('Build')
-        steps:
-            - task: ShellScript@2
-              inputs:
-                scriptPath: test.sh
-                failOnStandardError: true
+      # - job: Shell
+      #   displayName: Run Shell Script
+      #   dependsOn: Build
+      #   condition: succeeded('Build')
+      #   steps:
+      #       - task: ShellScript@2
+      #         inputs:
+      #           scriptPath: test.sh
+      #           failOnStandardError: true
