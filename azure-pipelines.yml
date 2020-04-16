@@ -37,7 +37,18 @@ jobs:
           inputs:
             pathToPublish: $(Build.ArtifactStagingDirectory)
             artifactName: Maven Build Output
-    
+        - task: SoapUI@2
+          inputs:
+            projectFile: 'project.xml'
+            quietMode: 'yes'
+
+        - task: PublishTestResults@2
+          inputs:
+                testResultsFormat: 'JUnit'
+                testResultsFiles: '**/TEST-*.xml'
+                failTaskOnFailedTests: true
+                testRunTitle: 'SOAPUI'
+                
       # - job: Shell
       #   displayName: Run Shell Script
       #   dependsOn: Build
