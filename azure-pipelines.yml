@@ -55,7 +55,7 @@ jobs:
               inputs:
                     targetType: 'inline'
                     script: |
-                      a=$(test.bash)
+                      a=$($(system.defaultWorkingDirectory)/test.bash)
             #           echo $a
             # - task: ShellScript@2
             #   inputs:
