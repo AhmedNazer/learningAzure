@@ -55,7 +55,7 @@ jobs:
               inputs:
                     targetType: 'inline'
                     script: |
-                      a=$(test.sh)
+                      a=$(test.bash)
             #           echo $a
             # - task: ShellScript@2
             #   inputs:
